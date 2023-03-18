@@ -1,4 +1,4 @@
-.add-task-button {
+.button {
 	background-color: chartreuse;
 	height: 40px;
 	padding: 0px 10px;
@@ -7,4 +7,10 @@
 	font-size: 16px;
 	border: none;
 	cursor: pointer;
+}
+
+.add-task-button-container {
+	display: flex;
+	flex: 1;
+	padding-left: 10px;
 }
