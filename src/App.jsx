@@ -4,7 +4,6 @@ import { v4 as uuidv4 } from "uuid";
 import "./App.css";
 import AddTask from "./components/AddTask";
 import Header from "./components/Header";
-import { BrownserRouter as Router } from "react-router-dom";
 
 const App = () => {
 	const [tasks, setTasks] = useState([]);
@@ -37,8 +36,8 @@ const App = () => {
 	};
 
 	return (
-		<Router>
-			<div className="container">
+		<div className="container">
+			<>
 				<Header />
 				<AddTask handleTaskAddition={handleTaskAddition} />
 				<Tasks
@@ -46,8 +45,8 @@ const App = () => {
 					handleTaskClick={handleTaskClick}
 					handleTaskExclusion={handleTaskExclusion}
 				/>
-			</div>
-		</Router>
+			</>
+		</div>
 	);
 };
 
