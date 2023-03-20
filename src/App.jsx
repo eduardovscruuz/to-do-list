@@ -4,8 +4,10 @@ import { v4 as uuidv4 } from "uuid";
 import "./App.css";
 import AddTask from "./components/AddTask";
 import Header from "./components/Header";
+import { useNavigate } from "react-router-dom";
 
 const App = () => {
+	const navigate = useNavigate();
 	const [tasks, setTasks] = useState([]);
 
 	const handleTaskClick = (taskId) => {
@@ -35,6 +37,10 @@ const App = () => {
 		setTasks(newTasks);
 	};
 
+	const handleTaskDetails = (task) => {
+		navigate(`/${task}`);
+	};
+
 	return (
 		<div className="container">
 			<>
@@ -44,6 +50,7 @@ const App = () => {
 					tasks={tasks}
 					handleTaskClick={handleTaskClick}
 					handleTaskExclusion={handleTaskExclusion}
+					handleTaskDetails={handleTaskDetails}
 				/>
 			</>
 		</div>

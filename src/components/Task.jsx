@@ -2,7 +2,12 @@ import React from "react";
 import "./Styles/Task.css";
 import { CgClose, CgInfo } from "react-icons/cg";
 
-const Task = ({ task, handleTaskClick, handleTaskExclusion }) => {
+const Task = ({
+	task,
+	handleTaskClick,
+	handleTaskExclusion,
+	handleTaskDetails,
+}) => {
 	return (
 		<div
 			className="task-container"
@@ -16,7 +21,10 @@ const Task = ({ task, handleTaskClick, handleTaskExclusion }) => {
 			</div>
 
 			<div className="buttons-container">
-				<button className="info-task-button">
+				<button
+					className="info-task-button"
+					onClick={() => handleTaskDetails(task.title)}
+				>
 					<CgInfo />
 				</button>
 

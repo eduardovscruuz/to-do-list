@@ -2,16 +2,21 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import Button from "./Button";
 import "./Styles/TaskDetails.css";
+import { useNavigate } from "react-router-dom";
 
 const TaskDetails = () => {
+	const navigate = useNavigate();
 	const params = useParams();
-	console.log(params);
+
+	const backButton = () => {
+		navigate("/");
+	};
 
 	return (
 		<>
 			<div className="container">
 				<div className="back-button-container">
-					<Button>Voltar</Button>
+					<Button onClick={backButton}>Voltar</Button>
 				</div>
 				<div className="task-detail-container">
 					<h2>{params.taskTitle}</h2>
