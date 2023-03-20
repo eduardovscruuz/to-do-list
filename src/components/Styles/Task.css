@@ -17,8 +17,24 @@
 .info-task-button {
 	background-color: transparent;
 	color: chartreuse;
-	border: none;
+	border: 1px solid transparent;
 	font-size: 24px;
 	font-weight: bold;
+	cursor: pointer;
+	display: flex;
+	padding: 3px;
+	transition: all 0.2s;
+}
+
+.remove-task-button:hover,
+.info-task-button:hover {
+	border: 1px solid chartreuse;
+	cursor: pointer;
+}
+
+.remove-task-button:active,
+.info-task-button:active {
+	color: black;
+	background-color: chartreuse;
 	cursor: pointer;
 }

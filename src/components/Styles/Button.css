@@ -7,10 +7,23 @@
 	font-size: 16px;
 	border: none;
 	cursor: pointer;
+	transition: all 0.5s ease;
+}
+
+.button:hover {
+	color: chartreuse;
+	background-color: transparent;
+	border: 1px solid chartreuse;
 }
 
 .add-task-button-container {
 	display: flex;
 	flex: 1;
 	padding-left: 10px;
+}
+
+.buttons-container {
+	width: 30%;
+	display: flex;
+	justify-content: flex-end;
 }
